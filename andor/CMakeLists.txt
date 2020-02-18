@@ -50,12 +50,17 @@ add_library(andor_aograph include/andor_aograph.cpp)
 ## Declare a C++ executable
 # name  name.cpp
 add_executable(andor src/andor_main.cpp )
-
+add_executable(andor_youbot src/andor_youbot.cpp )
 add_dependencies(andor_aograph andor_msgs_generate_messages_cpp)
-
+add_dependencies(andor_youbot geometry_msgs_generate_messages_cpp andor_msgs_generate_messages_cpp)
 add_dependencies(andor geometry_msgs_generate_messages_cpp andor_msgs_generate_messages_cpp) #baxter_core_msgs_generate_messages_cpp  
 ## Specify libraries to link a library or executable target against
 target_link_libraries(andor
+   ${catkin_LIBRARIES}
+andor_aonode
+andor_aograph
+ )
+target_link_libraries(andor_youbot
    ${catkin_LIBRARIES}
 andor_aonode
 andor_aograph
