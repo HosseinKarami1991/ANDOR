@@ -1,0 +1,24 @@
+simpletaskdual 7 done
+obj1inipos 0
+obj1finpos 0
+done 0
+checked 0
+na 0
+faulty 0
+not 0
+h0 1 checked 2 -
+obj1inipos
+h1 1 na 1 -
+checked
+h2 1 faulty 3 -
+checked
+h3 1 not 2 -
+checked
+h4 1 obj1finpos 1 -
+na
+h5 1 obj1finpos 3 -
+faulty
+h6 1 obj1finpos 2-
+not
+h7 1 done 1 -
+obj1finpos
